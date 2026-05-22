@@ -21,7 +21,7 @@ catalog:
   drizzle-kit: ^0.31.10
   drizzle-orm: ^0.45.2
   drizzle-zod: ^0.8.3
-  eslint: ^9.39.4
+  eslint: ^10.4.0
   jsdom: ^29.1.1
   postcss: ^8.5.14
   prettier: ^3.8.3
