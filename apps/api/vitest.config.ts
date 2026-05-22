@@ -1,1 +1,1 @@
-export { viteConfig as default } from "@repo/vitest/config";
+export { viteConfig as default } from "@finali/vitest/config";

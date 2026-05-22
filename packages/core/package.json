@@ -1,5 +1,5 @@
 {
-  "name": "@repo/core",
+  "name": "@finali/core",
   "private": true,
   "license": "MIT",
   "type": "module",
@@ -19,16 +19,16 @@
     "test:unit:coverage": "vitest run --coverage --passWithNoTests",
     "typecheck": "tsc --noEmit --emitDeclarationOnly false"
   },
-  "prettier": "@repo/prettier-config",
+  "prettier": "@finali/prettier-config",
   "dependencies": {
-    "@repo/db": "workspace:*",
+    "@finali/db": "workspace:*",
     "zod": "catalog:"
   },
   "devDependencies": {
-    "@repo/eslint-config": "workspace:*",
-    "@repo/prettier-config": "workspace:*",
-    "@repo/tsconfig": "workspace:*",
-    "@repo/vitest": "workspace:*",
+    "@finali/eslint-config": "workspace:*",
+    "@finali/prettier-config": "workspace:*",
+    "@finali/tsconfig": "workspace:*",
+    "@finali/vitest": "workspace:*",
     "eslint": "catalog:",
     "prettier": "catalog:",
     "typescript": "catalog:",

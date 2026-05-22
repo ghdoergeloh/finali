@@ -1,5 +1,5 @@
 {
-  "name": "@repo/vitest",
+  "name": "@finali/vitest",
   "version": "0.1.0",
   "private": true,
   "license": "MIT",
@@ -13,7 +13,7 @@
     "lint": "eslint",
     "typecheck": "tsc --noEmit"
   },
-  "prettier": "@repo/prettier-config",
+  "prettier": "@finali/prettier-config",
   "dependencies": {
     "@vitejs/plugin-react": "catalog:",
     "@vitest/coverage-istanbul": "catalog:",
@@ -22,9 +22,9 @@
     "vitest": "catalog:"
   },
   "devDependencies": {
-    "@repo/eslint-config": "workspace:*",
-    "@repo/prettier-config": "workspace:*",
-    "@repo/tsconfig": "workspace:*",
+    "@finali/eslint-config": "workspace:*",
+    "@finali/prettier-config": "workspace:*",
+    "@finali/tsconfig": "workspace:*",
     "eslint": "catalog:",
     "prettier": "catalog:",
     "typescript": "catalog:"

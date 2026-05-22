@@ -2,8 +2,8 @@ import type { SubmitEvent } from "react";
 import { useState } from "react";
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 
-import { Button } from "@repo/ui/Button";
-import { TextField } from "@repo/ui/TextField";
+import { Button } from "@finali/ui/Button";
+import { TextField } from "@finali/ui/TextField";
 
 import { authClient } from "../lib/auth";
 

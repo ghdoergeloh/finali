@@ -1,5 +1,5 @@
 {
-  "name": "@repo/auth",
+  "name": "@finali/auth",
   "private": true,
   "license": "MIT",
   "type": "module",
@@ -16,19 +16,19 @@
     "test:unit:coverage": "vitest run --coverage --passWithNoTests",
     "typecheck": "tsc --noEmit"
   },
-  "prettier": "@repo/prettier-config",
+  "prettier": "@finali/prettier-config",
   "dependencies": {
-    "@repo/db": "workspace:*",
-    "@repo/transactional": "workspace:*",
+    "@finali/db": "workspace:*",
+    "@finali/transactional": "workspace:*",
     "better-auth": "^1.6.11",
     "zod": "catalog:"
   },
   "devDependencies": {
     "@better-auth/cli": "catalog:",
-    "@repo/eslint-config": "workspace:*",
-    "@repo/prettier-config": "workspace:*",
-    "@repo/tsconfig": "workspace:*",
-    "@repo/vitest": "workspace:*",
+    "@finali/eslint-config": "workspace:*",
+    "@finali/prettier-config": "workspace:*",
+    "@finali/tsconfig": "workspace:*",
+    "@finali/vitest": "workspace:*",
     "eslint": "catalog:",
     "prettier": "catalog:",
     "typescript": "catalog:",

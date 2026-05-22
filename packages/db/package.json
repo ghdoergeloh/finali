@@ -1,5 +1,5 @@
 {
-  "name": "@repo/db",
+  "name": "@finali/db",
   "private": true,
   "license": "MIT",
   "type": "module",
@@ -30,7 +30,7 @@
     "typecheck": "tsc --noEmit --emitDeclarationOnly false",
     "with-env": "dotenv -e ../../.env --"
   },
-  "prettier": "@repo/prettier-config",
+  "prettier": "@finali/prettier-config",
   "dependencies": {
     "dotenv": "catalog:",
     "drizzle-orm": "catalog:",
@@ -39,10 +39,10 @@
     "zod": "catalog:"
   },
   "devDependencies": {
-    "@repo/eslint-config": "workspace:*",
-    "@repo/prettier-config": "workspace:*",
-    "@repo/tsconfig": "workspace:*",
-    "@repo/vitest": "workspace:*",
+    "@finali/eslint-config": "workspace:*",
+    "@finali/prettier-config": "workspace:*",
+    "@finali/tsconfig": "workspace:*",
+    "@finali/vitest": "workspace:*",
     "@types/pg": "^8.20.0",
     "drizzle-kit": "catalog:",
     "eslint": "catalog:",

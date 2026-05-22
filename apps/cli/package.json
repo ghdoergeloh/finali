@@ -1,5 +1,5 @@
 {
-  "name": "@repo/cli",
+  "name": "@finali/cli",
   "private": true,
   "type": "module",
   "scripts": {
@@ -12,15 +12,15 @@
     "test:unit:coverage": "vitest run --coverage --passWithNoTests",
     "typecheck": "tsc --noEmit --emitDeclarationOnly false"
   },
-  "prettier": "@repo/prettier-config",
+  "prettier": "@finali/prettier-config",
   "dependencies": {
     "commander": "^14.0.3"
   },
   "devDependencies": {
-    "@repo/eslint-config": "workspace:*",
-    "@repo/prettier-config": "workspace:*",
-    "@repo/tsconfig": "workspace:*",
-    "@repo/vitest": "workspace:*",
+    "@finali/eslint-config": "workspace:*",
+    "@finali/prettier-config": "workspace:*",
+    "@finali/tsconfig": "workspace:*",
+    "@finali/vitest": "workspace:*",
     "@types/node": "catalog:",
     "eslint": "catalog:",
     "prettier": "catalog:",

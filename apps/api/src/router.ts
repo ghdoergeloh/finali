@@ -1,7 +1,7 @@
 import { implement } from "@orpc/server";
 
-import { auth } from "@repo/auth/auth";
-import { contract } from "@repo/contract";
+import { auth } from "@finali/auth/auth";
+import { contract } from "@finali/contract";
 
 const base = implement(contract).$context<{ request: Request }>();
 

@@ -11,12 +11,12 @@ contracts, React Aria Components, Tailwind, Vitest.
    git clone https://github.com/ghdoergeloh/mono-repo-template my-app
    cd my-app
    ```
-2. Rename the `@repo` workspace namespace to something project-specific.
-   `@repo` appears in `package.json` files, tsconfig extends, lint
+2. Rename the `@finali` workspace namespace to something project-specific.
+   `@finali` appears in `package.json` files, tsconfig extends, lint
    configs, imports, and a handful of docs. One sweep handles all of it:
    ```bash
-   git grep -l '@repo' | xargs sed -i '' 's|@repo|@myapp|g'   # macOS
-   git grep -l '@repo' | xargs sed -i     's|@repo|@myapp|g'   # Linux
+   git grep -l '@finali' | xargs sed -i '' 's|@finali|@myapp|g'   # macOS
+   git grep -l '@finali' | xargs sed -i     's|@finali|@myapp|g'   # Linux
    ```
 3. Copy `.env.example` to `.env` and adjust.
 4. `docker compose up -d` to bring up PostgreSQL + Mailpit.
