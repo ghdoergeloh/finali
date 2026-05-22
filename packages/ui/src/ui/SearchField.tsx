@@ -7,7 +7,7 @@ import type {
 import { SearchIcon, XIcon } from "lucide-react";
 import { SearchField as AriaSearchField } from "react-aria-components";
 
-import { composeTailwindRenderProps } from "@repo/ui";
+import { composeTailwindRenderProps } from "@finali/ui";
 
 import { Description, FieldError, FieldGroup, Input, Label } from "./Field";
 import { FieldButton } from "./FieldButton";

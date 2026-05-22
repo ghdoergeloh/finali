@@ -1,5 +1,5 @@
 {
-  "name": "@repo/transactional",
+  "name": "@finali/transactional",
   "private": true,
   "license": "MIT",
   "type": "module",
@@ -18,17 +18,17 @@
     "preview": "email dev --dir src/templates --port 3001",
     "typecheck": "tsc --noEmit --emitDeclarationOnly false"
   },
-  "prettier": "@repo/prettier-config",
+  "prettier": "@finali/prettier-config",
   "dependencies": {
     "@react-email/components": "^1.0.12",
     "nodemailer": "^8.0.7",
     "react": "catalog:react19"
   },
   "devDependencies": {
+    "@finali/eslint-config": "workspace:*",
+    "@finali/prettier-config": "workspace:*",
+    "@finali/tsconfig": "workspace:*",
     "@react-email/preview-server": "^5.2.10",
-    "@repo/eslint-config": "workspace:*",
-    "@repo/prettier-config": "workspace:*",
-    "@repo/tsconfig": "workspace:*",
     "@types/nodemailer": "^8.0.0",
     "@types/react": "catalog:react19",
     "eslint": "catalog:",

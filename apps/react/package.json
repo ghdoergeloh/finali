@@ -1,5 +1,5 @@
 {
-  "name": "@repo/react",
+  "name": "@finali/react",
   "version": "0.0.0",
   "private": true,
   "type": "module",
@@ -14,13 +14,13 @@
     "test:unit:coverage": "vitest run --coverage --passWithNoTests",
     "typecheck": "tsc --noEmit --emitDeclarationOnly false"
   },
-  "prettier": "@repo/prettier-config",
+  "prettier": "@finali/prettier-config",
   "dependencies": {
+    "@finali/auth": "workspace:*",
+    "@finali/contract": "workspace:*",
+    "@finali/ui": "workspace:*",
     "@orpc/client": "^1.14.3",
     "@orpc/react-query": "^1.14.3",
-    "@repo/auth": "workspace:*",
-    "@repo/contract": "workspace:*",
-    "@repo/ui": "workspace:*",
     "@tanstack/react-query": "^5.100.10",
     "@tanstack/react-router": "^1.170.4",
     "@tanstack/react-router-devtools": "^1.167.0",
@@ -28,11 +28,11 @@
     "react-dom": "catalog:react19"
   },
   "devDependencies": {
-    "@repo/eslint-config": "workspace:*",
-    "@repo/prettier-config": "workspace:*",
-    "@repo/tailwind-config": "workspace:*",
-    "@repo/tsconfig": "workspace:*",
-    "@repo/vitest": "workspace:*",
+    "@finali/eslint-config": "workspace:*",
+    "@finali/prettier-config": "workspace:*",
+    "@finali/tailwind-config": "workspace:*",
+    "@finali/tsconfig": "workspace:*",
+    "@finali/vitest": "workspace:*",
     "@tailwindcss/vite": "catalog:",
     "@tanstack/router-plugin": "^1.168.6",
     "@types/node": "catalog:",

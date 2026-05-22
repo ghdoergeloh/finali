@@ -1,5 +1,5 @@
 {
-  "extends": "@repo/tsconfig/compiled-package.json",
+  "extends": "@finali/tsconfig/compiled-package.json",
   "compilerOptions": {
     "jsx": "react-jsx"
   },

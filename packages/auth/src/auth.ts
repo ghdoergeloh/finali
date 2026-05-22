@@ -1,9 +1,9 @@
 import { betterAuth } from "better-auth";
 import { drizzleAdapter } from "better-auth/adapters/drizzle";
 
-import { db } from "@repo/db/client";
-import * as schema from "@repo/db/schema";
-import { sendVerificationEmail } from "@repo/transactional";
+import { db } from "@finali/db/client";
+import * as schema from "@finali/db/schema";
+import { sendVerificationEmail } from "@finali/transactional";
 
 export const auth = betterAuth({
   database: drizzleAdapter(db, {

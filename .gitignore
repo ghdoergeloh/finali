@@ -45,6 +45,9 @@ yarn-error.log*
 .env*
 !.env.example
 
+# local working directory
+.project
+
 # vercel
 .vercel
 

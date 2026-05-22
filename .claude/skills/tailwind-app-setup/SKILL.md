@@ -1,13 +1,13 @@
 ---
 name: tailwind-app-setup
-description: Wire Tailwind v4 + the shared design system into a new or broken app in this monorepo. Use when adding a new app under `apps/`, when classes from `@repo/ui` aren't being picked up by the bundler, when dark mode doesn't apply, when a new design token is needed, or when something "looks like a Tailwind problem." Covers the entry CSS pattern, the `@source` directive, dark‑mode wiring, and adding tokens to `tooling/tailwind/theme.css`.
+description: Wire Tailwind v4 + the shared design system into a new or broken app in this monorepo. Use when adding a new app under `apps/`, when classes from `@finali/ui` aren't being picked up by the bundler, when dark mode doesn't apply, when a new design token is needed, or when something "looks like a Tailwind problem." Covers the entry CSS pattern, the `@source` directive, dark‑mode wiring, and adding tokens to `tooling/tailwind/theme.css`.
 ---
 
 # Tailwind app setup
 
 Use this skill when wiring Tailwind into a new app, or when fixing one of the recurring failure modes:
 
-- Classes used only inside `@repo/ui` components don't appear in the bundle
+- Classes used only inside `@finali/ui` components don't appear in the bundle
 - Dark mode doesn't switch, or there's a light/dark flash on boot
 - The app needs a colour the existing tokens don't cover
 - A new app's styles look "almost right" but off compared to the React app
@@ -70,15 +70,15 @@ In the new app's `package.json`:
 ```jsonc
 {
   "devDependencies": {
-    "@repo/tailwind-config": "workspace:*",
-    "@repo/ui": "workspace:*",
+    "@finali/tailwind-config": "workspace:*",
+    "@finali/ui": "workspace:*",
     "@tailwindcss/vite": "catalog:", // Vite-based apps
     "tailwindcss": "catalog:",
   },
 }
 ```
 
-For non‑Vite bundlers, depend on `@tailwindcss/postcss` instead and reuse `@repo/tailwind-config/postcss-config`.
+For non‑Vite bundlers, depend on `@tailwindcss/postcss` instead and reuse `@finali/tailwind-config/postcss-config`.
 
 ### 2. Bundler plugin
 
@@ -100,11 +100,11 @@ Every renderer's entry CSS file (e.g. `src/index.css`, `src/renderer/src/styles/
 
 ```css
 @import "tailwindcss";
-@import "@repo/tailwind-config/theme";
-@source "../<relative path>/node_modules/@repo/ui/src";
+@import "@finali/tailwind-config/theme";
+@source "../<relative path>/node_modules/@finali/ui/src";
 ```
 
-The `@source` directive is **mandatory** in Tailwind v4. Without it the bundler doesn't scan `@repo/ui`, and classes that appear only in shared components silently disappear from production. Adjust the relative path so it points at the symlink in the app's `node_modules`.
+The `@source` directive is **mandatory** in Tailwind v4. Without it the bundler doesn't scan `@finali/ui`, and classes that appear only in shared components silently disappear from production. Adjust the relative path so it points at the symlink in the app's `node_modules`.
 
 Reference implementations: `apps/react/src/index.css`, `apps/electron/src/renderer/src/styles/globals.css`.
 
@@ -151,11 +151,11 @@ Use OKLCH for new colours (matches the existing palette and gives perceptually u
 
 ## Adding shadcn components
 
-`pnpm -F @repo/ui ui-add` (calls `pnpm dlx shadcn@latest add`). `packages/ui/components.json` already points `tailwind.css` at `../../tooling/tailwind/theme.css`, so added components use the shared token system automatically. Don't pass `--baseColor`; it's a no‑op given how `components.json` is configured.
+`pnpm -F @finali/ui ui-add` (calls `pnpm dlx shadcn@latest add`). `packages/ui/components.json` already points `tailwind.css` at `../../tooling/tailwind/theme.css`, so added components use the shared token system automatically. Don't pass `--baseColor`; it's a no‑op given how `components.json` is configured.
 
 ## Failure modes & fixes
 
-**"Tailwind class from `@repo/ui` doesn't apply"** — `@source` directive missing or path wrong in the app's entry CSS. Verify with `ls node_modules/@repo/ui` from the app's directory and adjust the relative path.
+**"Tailwind class from `@finali/ui` doesn't apply"** — `@source` directive missing or path wrong in the app's entry CSS. Verify with `ls node_modules/@finali/ui` from the app's directory and adjust the relative path.
 
 **"Dark mode doesn't switch"** — `<html>` doesn't have `class="dark"`. Either no toggle is wired up, or the toggle runs after first paint. Check `document.documentElement.classList`. If the boot block isn't there, components will style correctly _after_ the user toggles, but flash on every reload.
 
