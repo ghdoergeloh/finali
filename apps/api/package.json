@@ -29,7 +29,7 @@
     "@opentelemetry/semantic-conventions": "^1.41.1",
     "@orpc/server": "^1.14.3",
     "dotenv": "catalog:",
-    "hono": "^4.12.19"
+    "hono": "^4.12.21"
   },
   "devDependencies": {
     "@finali/eslint-config": "workspace:*",
