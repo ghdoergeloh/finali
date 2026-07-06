@@ -20,7 +20,7 @@
   "dependencies": {
     "@finali/db": "workspace:*",
     "@finali/transactional": "workspace:*",
-    "better-auth": "^1.6.11",
+    "better-auth": "^1.6.23",
     "zod": "catalog:"
   },
   "devDependencies": {
